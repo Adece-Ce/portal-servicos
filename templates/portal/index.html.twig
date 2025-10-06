@@ -1,0 +1,30 @@
+{% extends '_layouts/portal.html.twig' %}
+
+{% block page_title %}
+    Dashboard
+{% endblock %}
+
+{% block content %}
+    <div class="bg-white p-6 rounded-lg shadow">
+        <h1 class="text-2xl font-bold text-text-primary">Bem-vindo ao Portal de Serviços da ADECE!</h1>
+        <p class="mt-2 text-text-secondary">
+            Este é o seu painel de controle. Utilize o menu à esquerda para navegar pelas funcionalidades do sistema.
+        </p>
+    </div>
+
+    <div class="mt-8">
+        <h2 class="text-xl font-semibold text-text-primary mb-4">Meus Sistemas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+                <h3 class="font-bold text-lg text-text-primary">SISPAG</h3>
+                <p class="text-sm text-text-secondary mt-1">Sistema de Pagamentos</p>
+                <a href="#" class="text-sm text-adece-primary font-semibold mt-4 inline-flex items-center group">
+                    Acessar
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
