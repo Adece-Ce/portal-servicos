@@ -1,0 +1,4 @@
+list:
+    path: /teste
+    controller: App\Controller\Web\TesteWebController::list
+    methods: ['GET']
