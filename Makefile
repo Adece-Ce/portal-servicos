@@ -9,3 +9,8 @@ stop:
 # Para e remove os serviços Docker
 down:
 	docker compose --profile '*' down
+
+# Compila os arquivos do frontend
+compile_frontend:
+	docker compose exec -T php bash -c "php bin/console tailwind:build --minify"
+	docker compose exec -T php bash -c "php bin/console asset-map:compile"
