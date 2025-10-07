@@ -6,4 +6,22 @@
  */
 import './styles/app.css';
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.getElementById('sidebar');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    const toggleSidebar = () => {
+        sidebar.classList.toggle('-translate-x-full');
+        sidebar.classList.toggle('translate-x-0');
+        sidebarOverlay.classList.toggle('hidden');
+    };
+
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', toggleSidebar);
+    }
+
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', toggleSidebar);
+    }
+});
