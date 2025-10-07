@@ -1,0 +1,4 @@
+web_teste:
+    resource: 'web/teste.yaml'
+    prefix: /
+    name_prefix: web_teste_
