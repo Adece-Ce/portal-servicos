@@ -14,3 +14,6 @@ down:
 compile_frontend:
 	docker compose exec -T php bash -c "php bin/console tailwind:build --minify"
 	docker compose exec -T php bash -c "php bin/console asset-map:compile"
+
+container_php:
+	docker compose exec php bash
