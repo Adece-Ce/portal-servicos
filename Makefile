@@ -15,5 +15,9 @@ compile_frontend:
 	docker compose exec -T php bash -c "php bin/console tailwind:build --minify"
 	docker compose exec -T php bash -c "php bin/console asset-map:compile"
 
+# Acessa o container PHP
 container_php:
 	docker compose exec php bash
+
+migrate_orm:
+	docker compose exec -T php bash -c "php bin/console doctrine:migrations:migrate -n"
