@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use App\Repository\Interface\ProfileRepositoryInterface;
+use App\Repository\ProfileRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Uid\Uuid;
 
-#[ORM\Entity(repositoryClass: ProfileRepositoryInterface::class)]
+#[ORM\Entity(repositoryClass: ProfileRepository::class)]
 class Profile extends AbstractEntity
 {
     #[ORM\Id]
